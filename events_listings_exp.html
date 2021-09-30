@@ -26,6 +26,8 @@
                 border:0px;
                 border-radius: 0px;
                 text-decoration: none;
+                text-transform: uppercase;
+                font-weight:bolder;
                 color:#EAEAEA;
                 -webkit-box-shadow: inset -5px 0px 0px 0px #FFF; 
                 box-shadow: inset -5px 0px 0px 0px #FFF;
@@ -47,7 +49,7 @@
             .evntList {
               list-style-type: none;
               margin:0px;
-              padding:0px;
+              padding:20px 0px;
               display:flex;
               flex-direction: column;
             }
@@ -60,11 +62,13 @@
               flex-direction:column;
             }
             .eventTp { display:flex; flex-direction:row; height:33%;}
-            .evntDt {min-height:300px; background-color:#ffd530; text-align:center; flex-direction: column; justify-content: center; flex-basis:30%; flex-grow:1;}
+            .evntDt {min-height:250px; background-color:#ffd530; text-align:center; flex-direction: column; justify-content: center; flex-basis:30%; flex-grow:1;}
             .evntDt span {display:block; text-align:center;}
-            .entPhoto { min-height:300px; flex-basis:70%; flex-grow:2; background-color: #CCC; justify-content: center;}
+            .evntDow, .evntMonth, .evntDate {font-weight:bolder; font-size:1.5em; padding:2px;}
+            .evntDate {font-size:5.5em; letter-spacing: -0.09em; line-height:100%;}
+            .entPhoto { min-height:250px; flex-basis:70%; flex-grow:2; background-color: #CCC; justify-content: center;}
             .evntInfo {flex-direction: column;padding:20px;}
-            .evntInfo h2 {line-height:50%; text-transform:uppercase;padding:0px; margin:0px;}
+            .evntInfo h2 {line-height:95%; text-transform:uppercase;padding:0px; margin:0px;}
             .evntList li div {border:1px solid red; box-sizing:border-box; display:flex;}
         </style>
     </head>
@@ -78,55 +82,65 @@
         <div class="container">
             <h2>Dynamic Tabs</h2>
             <ul class="nav nav-tabs nav-justified">
-              <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
-              <li><a data-toggle="tab" href="#menu1">Menu 1</a></li>
-              <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
-              <li><a data-toggle="tab" href="#menu3">Menu 3</a></li>
+              <li class="active"><a data-toggle="tab" href="#home">Events</a></li>
+              <li><a data-toggle="tab" href="#menu1">Virtual Exhibits </a></li>
+              <li><a data-toggle="tab" href="#menu2">Monthly Programs</a></li>
             </ul>
           
             <div class="tab-content">
               <div id="home" class="tab-pane fade in active">
-                <h3>HOME</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <!-- BEGIN EVENT LIST-->
+                <ul class="evntList">
+                  <li>
+                      <div class="evntTp">
+                        <div class="evntDt">
+                          <span class="evntDow">TUES. - WED.</span>
+                          <span class="evntMonth">NOVEMBER</span>
+                          <span class="evntDate">15</span>
+                        </div>
+                        <div class="entPhoto">Photo</div>
+                      </div>
+                      <div class="evntInfo">
+                        <h2>Public Flower Laying Ceremony</h2>
+                        <p>A Naval District of Washington historical plaque dedication, naval symposium and 21-Gun Salute Ceremony at the Washington Navy Yard
+                          Location: Washington Navy Yard | Directions: <a href="#">Link</a><br/>
+                          Time: PENDING </p>
+                      </div>
+                      <div class="evntShr">Share & Calendar bars</div>
+                  </li>
+               
+                  <li>Event 2</li>
+                  <li>Event 3</li>
+                  <li>Event 4</li>
+                </ul>
+                <!-- END EVENT LIST -->
               </div>
+              <!-- END TAB CONTENT -->
               <div id="menu1" class="tab-pane fade">
-                <h3>Menu 1</h3>
+                <h3>EXHIBITS</h3>
                 <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
               </div>
               <div id="menu2" class="tab-pane fade">
-                <h3>Menu 2</h3>
+                <h3>MONTHLY PROGRAMS</h3>
                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
               </div>
-              <div id="menu3" class="tab-pane fade">
-                <h3>Menu 3</h3>
-                <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-              </div>
             </div>
+            <!-- END TABS -->
           </div>
+          <!-- END TAB CONTENT HOLDER -->
 
 
 </div> <!-- END CONTENT DIV-->
 
-<ul class="evntList">
-  <li>
-      <div class="evntTp">
-        <div class="evntDt">
-          <span>Day of week</span>
-          <span>Month</span>
-          <span>Date</span>
-        </div>
-        <div class="entPhoto">Photo</div>
-      </div>
-      <div class="evntInfo">
-        <h2>Event Title</h2>
-        <p>Lorem ipsum plurum etc. etc. </p>
-      </div>
-      <div class="evntShr">Share & Calendar bars</div>
-  </li>
-  <li>Event 2</li>
-  <li>Event 3</li>
-  <li>Event 4</li>
-</ul>
+<p>
+  For 100 years, the Tomb of the Unknown Soldier (TUS) has served as the heart of Arlington National Cemetery. It stands as a people’s memorial that inspires reflection on service, valor, sacrifice and mourning. As a sacred memorial site and the grave of three unknown American service members, The neoclassical, white marble sarcophagus stands atop a hill overlooking Washington, D.C. Since 1921, it has provided a final resting place for one of America’s unidentified World War I service members, and Unknowns from later wars were added in 1958 and 1984. The Tomb has also served as a place of mourning and a site for reflection on military service. It connects visitors with the legacy of the U.S. armed forces throughout the nation’s history.
+</p>
+
+<h1>EVENTS</h1>
+
+<h2>Participate in the 100th Anniversary</h2>
+
+<p>The public will have many opportunities to participate in commemorating the 100th anniversary of the Tomb of the Unknown Soldier—just as the public was involved in the 1921 ceremony</p>
       
     </body>
 </html>
